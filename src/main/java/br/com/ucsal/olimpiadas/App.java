@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.com.ucsal.olimpiadas.classes.CadastrarParticipante;
+
 public class App {
 
 	static long proximoParticipanteId = 1;
@@ -15,8 +17,10 @@ public class App {
 	static final List<Prova> provas = new ArrayList<>();
 	static final List<Questao> questoes = new ArrayList<>();
 	static final List<Tentativa> tentativas = new ArrayList<>();
-
+	
 	private static final Scanner in = new Scanner(System.in);
+	CadastrarParticipante cadastrarPart = new CadastrarParticipante(in);
+	
 
 	public static void main(String[] args) {
 		seed();
