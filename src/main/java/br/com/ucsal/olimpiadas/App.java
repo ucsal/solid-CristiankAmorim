@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.com.ucsal.olimpiadas.classes.CadastrarParticipante;
+import br.com.ucsal.olimpiadas.classes.CadastrarProva;
 
 public class App {
 
@@ -20,6 +21,7 @@ public class App {
 	
 	private static final Scanner in = new Scanner(System.in);
 	static CadastrarParticipante cadastrarPart = new CadastrarParticipante(in, participantes);
+	static CadastrarProva cadastrarProva = new CadastrarProva(in, provas);
 	
 
 	public static void main(String[] args) {
@@ -37,7 +39,7 @@ public class App {
 
 			switch (in.nextLine()) {
 			case "1" -> cadastrarPart.cadastrarParticipante();
-			case "2" -> cadastrarProva();
+			case "2" -> cadastrarProva.cadastrarProva();
 			case "3" -> cadastrarQuestao();
 			case "4" -> aplicarProva();
 			case "5" -> listarTentativas();
