@@ -11,6 +11,7 @@ import br.com.ucsal.olimpiadas.classes.CadastrarQuestao;
 import br.com.ucsal.olimpiadas.classes.EscolherParticipante;
 import br.com.ucsal.olimpiadas.classes.EscolherProva;
 import br.com.ucsal.olimpiadas.classes.ListarTentativas;
+import br.com.ucsal.olimpiadas.classes.Seed;
 
 public class App {
 
@@ -33,9 +34,10 @@ public class App {
 	static AplicarProva aplicarProva = new AplicarProva(in, participantes, provas, questoes, 
 			tentativas, escolherParticipante, escolherProva);
 	static ListarTentativas listarTentativas = new ListarTentativas(tentativas);
+	static Seed seed = new Seed(provas, questoes);
 	
 	public static void main(String[] args) {
-		seed();
+		seed.seed();
 
 		while (true) {
 			System.out.println("\n=== OLIMPÍADA DE QUESTÕES (V1) ===");
@@ -304,7 +306,7 @@ public class App {
 	}*/
 
 
-	static void seed() {
+	/*static void seed() {
 
 		var prova = new Prova();
 		prova.setId(proximaProvaId++);
@@ -328,5 +330,5 @@ public class App {
 		q1.setAlternativaCorreta('C');
 
 		questoes.add(q1);
-	}
+	}*/
 }
