@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.com.ucsal.olimpiadas.classes.AplicarProva;
 import br.com.ucsal.olimpiadas.classes.CadastrarParticipante;
 import br.com.ucsal.olimpiadas.classes.CadastrarProva;
 import br.com.ucsal.olimpiadas.classes.CadastrarQuestao;
+import br.com.ucsal.olimpiadas.classes.EscolherParticipante;
 import br.com.ucsal.olimpiadas.classes.EscolherProva;
 
 public class App {
@@ -26,6 +28,8 @@ public class App {
 	static CadastrarProva cadastrarProva = new CadastrarProva(in, provas);
 	static EscolherProva escolherProva = new EscolherProva(in, provas);
 	static CadastrarQuestao cadastrarQuestao = new CadastrarQuestao(in, provas, questoes, escolherProva);
+	static EscolherParticipante escolherParticipante = new EscolherParticipante(in, participantes);
+	static AplicarProva aplicarProva = new AplicarProva(in, participantes, provas, questoes);
 	
 	public static void main(String[] args) {
 		seed();
@@ -43,7 +47,7 @@ public class App {
 			switch (in.nextLine()) {
 			case "1" -> cadastrarPart.cadastrarParticipante();
 			case "2" -> cadastrarProva.cadastrarProva();
-			case "3" -> cadastrarQuestao();
+			case "3" -> cadastrarQuestao.cadastrarQuestao();
 			case "4" -> aplicarProva();
 			case "5" -> listarTentativas();
 			case "0" -> {
@@ -93,7 +97,7 @@ public class App {
 		System.out.println("Prova criada: " + prova.getId());
 	}*/
 
-	static void cadastrarQuestao() {
+	/*static void cadastrarQuestao() {
 		if (provas.isEmpty()) {
 			System.out.println("não há provas cadastradas");
 			return;
@@ -132,7 +136,7 @@ public class App {
 		questoes.add(q);
 
 		System.out.println("Questão cadastrada: " + q.getId() + " (na prova " + provaId + ")");
-	}
+	}*/
 
 
 	static void aplicarProva() {
