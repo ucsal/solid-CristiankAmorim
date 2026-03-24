@@ -24,9 +24,9 @@ public class App {
 	private static final Scanner in = new Scanner(System.in);
 	static CadastrarParticipante cadastrarPart = new CadastrarParticipante(in, participantes);
 	static CadastrarProva cadastrarProva = new CadastrarProva(in, provas);
-	static CadastrarQuestao cadastrarQuestao = new CadastrarQuestao(in, provas, questoes);
 	static EscolherProva escolherProva = new EscolherProva(in, provas);
-
+	static CadastrarQuestao cadastrarQuestao = new CadastrarQuestao(in, provas, questoes, escolherProva);
+	
 	public static void main(String[] args) {
 		seed();
 
