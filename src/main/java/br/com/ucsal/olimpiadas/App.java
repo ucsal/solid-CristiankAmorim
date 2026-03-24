@@ -19,7 +19,7 @@ public class App {
 	static final List<Tentativa> tentativas = new ArrayList<>();
 	
 	private static final Scanner in = new Scanner(System.in);
-	CadastrarParticipante cadastrarPart = new CadastrarParticipante(in);
+	static CadastrarParticipante cadastrarPart = new CadastrarParticipante(in, participantes);
 	
 
 	public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class App {
 			System.out.print("> ");
 
 			switch (in.nextLine()) {
-			case "1" -> cadastrarParticipante();
+			case "1" -> cadastrarPart.cadastrarParticipante();
 			case "2" -> cadastrarProva();
 			case "3" -> cadastrarQuestao();
 			case "4" -> aplicarProva();
@@ -50,7 +50,7 @@ public class App {
 		}
 	}
 
-	static void cadastrarParticipante() {
+	/*static void cadastrarParticipante() {
 		System.out.print("Nome: ");
 		var nome = in.nextLine();
 
@@ -69,7 +69,7 @@ public class App {
 
 		participantes.add(p);
 		System.out.println("Participante cadastrado: " + p.getId());
-	}
+	}*/
 
 	static void cadastrarProva() {
 		System.out.print("Título da prova: ");

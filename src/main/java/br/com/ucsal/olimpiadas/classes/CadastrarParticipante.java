@@ -1,6 +1,5 @@
 package br.com.ucsal.olimpiadas.classes;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,11 +9,12 @@ import br.com.ucsal.olimpiadas.repository.CadastrarParticipanteRepository;
 public class CadastrarParticipante implements CadastrarParticipanteRepository {
 
 	private final Scanner in;
-	List<Participante> participantes = new ArrayList<>();
+	private final List<Participante> participantes;
 	static long proximoParticipanteId = 1;
 	
-	public CadastrarParticipante(Scanner in) {
+	public CadastrarParticipante(Scanner in, List<Participante> participantes) {
 		this.in = in;
+		this.participantes = participantes;
 	}
 	
 	public void cadastrarParticipante() {
