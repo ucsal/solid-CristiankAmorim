@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import br.com.ucsal.olimpiadas.classes.CadastrarParticipante;
 import br.com.ucsal.olimpiadas.classes.CadastrarProva;
+import br.com.ucsal.olimpiadas.classes.CadastrarQuestao;
+import br.com.ucsal.olimpiadas.classes.EscolherProva;
 
 public class App {
 
@@ -22,7 +24,8 @@ public class App {
 	private static final Scanner in = new Scanner(System.in);
 	static CadastrarParticipante cadastrarPart = new CadastrarParticipante(in, participantes);
 	static CadastrarProva cadastrarProva = new CadastrarProva(in, provas);
-	
+	static CadastrarQuestao cadastrarQuestao = new CadastrarQuestao(in, provas, questoes);
+	static EscolherProva escolherProva = new EscolherProva(in, provas);
 
 	public static void main(String[] args) {
 		seed();
@@ -73,7 +76,7 @@ public class App {
 		System.out.println("Participante cadastrado: " + p.getId());
 	}*/
 
-	static void cadastrarProva() {
+	/*static void cadastrarProva() {
 		System.out.print("Título da prova: ");
 		var titulo = in.nextLine();
 
@@ -88,7 +91,7 @@ public class App {
 
 		provas.add(prova);
 		System.out.println("Prova criada: " + prova.getId());
-	}
+	}*/
 
 	static void cadastrarQuestao() {
 		if (provas.isEmpty()) {
