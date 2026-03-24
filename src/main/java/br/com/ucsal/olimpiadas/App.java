@@ -10,6 +10,7 @@ import br.com.ucsal.olimpiadas.classes.CadastrarProva;
 import br.com.ucsal.olimpiadas.classes.CadastrarQuestao;
 import br.com.ucsal.olimpiadas.classes.EscolherParticipante;
 import br.com.ucsal.olimpiadas.classes.EscolherProva;
+import br.com.ucsal.olimpiadas.classes.ListarTentativas;
 
 public class App {
 
@@ -31,6 +32,7 @@ public class App {
 	static EscolherParticipante escolherParticipante = new EscolherParticipante(in, participantes);
 	static AplicarProva aplicarProva = new AplicarProva(in, participantes, provas, questoes, 
 			tentativas, escolherParticipante, escolherProva);
+	static ListarTentativas listarTentativas = new ListarTentativas(tentativas);
 	
 	public static void main(String[] args) {
 		seed();
@@ -49,8 +51,8 @@ public class App {
 			case "1" -> cadastrarPart.cadastrarParticipante();
 			case "2" -> cadastrarProva.cadastrarProva();
 			case "3" -> cadastrarQuestao.cadastrarQuestao();
-			case "4" -> aplicarProva();
-			case "5" -> listarTentativas();
+			case "4" -> aplicarProva.aplicarProva();
+			case "5" -> listarTentativas.listarTentativas();
 			case "0" -> {
 				System.out.println("tchau");
 				return;
@@ -140,7 +142,7 @@ public class App {
 	}*/
 
 
-	static void aplicarProva() {
+	/*static void aplicarProva() {
 		if (participantes.isEmpty()) {
 			System.out.println("cadastre participantes primeiro");
 			return;
@@ -214,18 +216,18 @@ public class App {
 				acertos++;
 		}
 		return acertos;
-	}
+	}*/
 
-	static void listarTentativas() {
+	/*static void listarTentativas() {
 		System.out.println("\n--- Tentativas ---");
 		for (var t : tentativas) {
 			System.out.printf("#%d | participante=%d | prova=%d | nota=%d/%d%n", t.getId(), t.getParticipanteId(),
 					t.getProvaId(), calcularNota(t), t.getRespostas().size());
 		}
-	}
+	}*/
 
 
-	static Long escolherParticipante() {
+	/*static Long escolherParticipante() {
 		System.out.println("\nParticipantes:");
 		for (var p : participantes) {
 			System.out.printf("  %d) %s%n", p.getId(), p.getNome());
@@ -244,9 +246,9 @@ public class App {
 			System.out.println("entrada inválida");
 			return null;
 		}
-	}
+	}*/
 
-	static Long escolherProva() {
+	/*static Long escolherProva() {
 		System.out.println("\nProvas:");
 		for (var p : provas) {
 			System.out.printf("  %d) %s%n", p.getId(), p.getTitulo());
@@ -265,9 +267,9 @@ public class App {
 			System.out.println("entrada inválida");
 			return null;
 		}
-	}
+	}*/
 
-	static void imprimirTabuleiroFen(String fen) {
+	/*static void imprimirTabuleiroFen(String fen) {
 
 		String parteTabuleiro = fen.split(" ")[0];
 		String[] ranks = parteTabuleiro.split("/");
@@ -299,7 +301,7 @@ public class App {
 		System.out.println("   -----------------");
 		System.out.println("    a b c d e f g h");
 		System.out.println();
-	}
+	}*/
 
 
 	static void seed() {
