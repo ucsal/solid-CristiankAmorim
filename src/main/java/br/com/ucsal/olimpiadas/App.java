@@ -30,7 +30,7 @@ public class App {
 	static CadastrarQuestao cadastrarQuestao = new CadastrarQuestao(in, provas, questoes, escolherProva);
 	static EscolherParticipante escolherParticipante = new EscolherParticipante(in, participantes);
 	static AplicarProva aplicarProva = new AplicarProva(in, participantes, provas, questoes, 
-			escolherParticipante, escolherProva);
+			tentativas, escolherParticipante, escolherProva);
 	
 	public static void main(String[] args) {
 		seed();
