@@ -13,7 +13,7 @@ public class CadastrarQuestao implements CadastrarQuestaoRepository{
 	private final List<Prova> provas;
 	private final List<Questao> questoes;
 	private final EscolherProva escolherProva;
-	static long proximaQuestaoId = 1;
+	static long proximaQuestaoId = 2;
 
 	public CadastrarQuestao(Scanner in, List<Prova> provas, List<Questao> questoes, EscolherProva escolherProva) {
 		this.in = in;

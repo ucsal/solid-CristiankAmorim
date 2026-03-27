@@ -10,7 +10,7 @@ public class CadastrarProva implements CadastrarProvaRepository {
 	
 	private final Scanner in;
 	private final List<Prova> provas;
-	static long proximaProvaId = 1;
+	static long proximaProvaId = 2;
 	
 	public CadastrarProva(Scanner in, List<Prova> provas) {
 		this.in = in;
