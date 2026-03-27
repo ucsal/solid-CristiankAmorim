@@ -12,6 +12,7 @@ import br.com.ucsal.olimpiadas.classes.EscolherParticipante;
 import br.com.ucsal.olimpiadas.classes.EscolherProva;
 import br.com.ucsal.olimpiadas.classes.ListarTentativas;
 import br.com.ucsal.olimpiadas.classes.Menu;
+import br.com.ucsal.olimpiadas.classes.OpcaoMenu;
 import br.com.ucsal.olimpiadas.classes.Seed;
 
 public class App {
@@ -32,13 +33,18 @@ public class App {
 	static ListarTentativas listarTentativas = new ListarTentativas(tentativas);
 	static Seed seed = new Seed(provas, questoes);
 	static Menu menu = new Menu();
-	
+
 	public static void main(String[] args) {
 		seed.seed();
-
+		menu.registrarNovaOpcao(new OpcaoMenu(1, "Cadastrar participante"));
+		menu.registrarNovaOpcao(new OpcaoMenu(2, "Cadastrar prova"));
+		menu.registrarNovaOpcao(new OpcaoMenu(3, "Cadastrar questão (A–E) em uma prova"));
+		menu.registrarNovaOpcao(new OpcaoMenu(4, "Aplicar prova (selecionar participante + prova)"));
+		menu.registrarNovaOpcao(new OpcaoMenu(5, "5) Listar tentativas (resumo)"));
+		
 		while (true) {
 			menu.showMenu();
-
+		
 			switch (in.nextLine()) {
 			case "1" -> cadastrarPart.cadastrarParticipante();
 			case "2" -> cadastrarProva.cadastrarProva();
