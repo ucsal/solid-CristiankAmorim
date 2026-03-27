@@ -11,6 +11,7 @@ import br.com.ucsal.olimpiadas.classes.CadastrarQuestao;
 import br.com.ucsal.olimpiadas.classes.EscolherParticipante;
 import br.com.ucsal.olimpiadas.classes.EscolherProva;
 import br.com.ucsal.olimpiadas.classes.ListarTentativas;
+import br.com.ucsal.olimpiadas.classes.Menu;
 import br.com.ucsal.olimpiadas.classes.Seed;
 
 public class App {
@@ -30,19 +31,13 @@ public class App {
 			tentativas, escolherParticipante, escolherProva);
 	static ListarTentativas listarTentativas = new ListarTentativas(tentativas);
 	static Seed seed = new Seed(provas, questoes);
+	static Menu menu = new Menu();
 	
 	public static void main(String[] args) {
 		seed.seed();
 
 		while (true) {
-			System.out.println("\n=== OLIMPÍADA DE QUESTÕES (V1) ===");
-			System.out.println("1) Cadastrar participante");
-			System.out.println("2) Cadastrar prova");
-			System.out.println("3) Cadastrar questão (A–E) em uma prova");
-			System.out.println("4) Aplicar prova (selecionar participante + prova)");
-			System.out.println("5) Listar tentativas (resumo)");
-			System.out.println("0) Sair");
-			System.out.print("> ");
+			menu.showMenu();
 
 			switch (in.nextLine()) {
 			case "1" -> cadastrarPart.cadastrarParticipante();
