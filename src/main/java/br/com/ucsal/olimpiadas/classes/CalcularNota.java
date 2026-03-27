@@ -1,8 +1,9 @@
 package br.com.ucsal.olimpiadas.classes;
 
 import br.com.ucsal.olimpiadas.Tentativa;
+import br.com.ucsal.olimpiadas.repository.CalcularNotaRepository;
 
-public class CalcularNota {
+public class CalcularNota implements CalcularNotaRepository {
 
 	public int calcularNota(Tentativa tentativa) {
 		int acertos = 0;
