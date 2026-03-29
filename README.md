@@ -1,4 +1,4 @@
-# 🏆 Olimpíada de Questões — Refatoração SOLID
+# 🏆 Olimpíada de Questões - Refatoração SOLID
 O objetivo deste foi refatorar uma aplicação Java com alto acoplamento para que ela obedecesse aos princípios SOLID.
 
 ## 🔄 Principais mudanças realizadas
