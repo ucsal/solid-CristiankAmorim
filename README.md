@@ -1,5 +1,5 @@
 # 🏆 Olimpíada de Questões - Refatoração SOLID
-O objetivo deste foi refatorar uma aplicação Java com alto acoplamento para que ela obedecesse aos princípios SOLID.
+O objetivo deste projeto foi refatorar uma aplicação Java com alto acoplamento para que ela obedecesse aos princípios SOLID.
 
 ## 🔄 Principais mudanças realizadas
 Antes da refatoração
@@ -15,7 +15,7 @@ Depois da refatoração
 - As dependências passaram a ser injetadas via construtor, em vez de instanciadas internamente;
 - Interfaces foram criadas para cada serviço no pacote repository;
 - O menu foi transformado em uma estrutura dinâmica e extensível com OpcaoMenu;
-- Outra alteração que merece destaque é que, as variáveis estáticas "proximaProvaId" e "proxiaQuestaoId", estavam inicialmente inicializadas com o valor 1. Isso gerava um erro, pois ao cadastrar uma nova prova ou questão,
+- Outra alteração que merece destaque é que, as variáveis estáticas "proximaProvaId" e "proximaQuestaoId", estavam inicialmente inicializadas com o valor 1. Isso gerava um erro, pois ao cadastrar uma nova prova ou questão,
 teria o mesmo id da prova e questão já criadas através do método **seed**, na inicialização do sistema. Logo, foi necessário inicializá-las com o valor 2.
 
 
